@@ -1,10 +1,8 @@
 export const PAGINATION_STYLE = `
 .pagination-box {
     position: relative;
-    margin-top: -10px;
 }
 .pagination-range {
-    margin-top: 7px;
     margin-left: 3px;
     display: inline-block;
 }
@@ -12,22 +10,22 @@ export const PAGINATION_STYLE = `
     float: right;
 }
 .pagination-controllers input {
-    min-width: 60px;
     /*padding: 1px 0px 0px 5px;*/
     text-align: right;
 }
 
 .pagination-limit {
-    margin-right: 25px;
-    display: inline-table;
-    width: 150px;
 }
 .pagination-pages {
     display: inline-block;
 }
 .pagination-page {
-    width: 110px;
+    width: 84px;
     display: inline-table;
+}
+.pagination-page .input-group .form-control,
+.pagination-page .input-group .input-group-addon {
+    height: 32px;
 }
 .pagination-box button {
     outline: none !important;
@@ -38,8 +36,34 @@ export const PAGINATION_STYLE = `
 .pagination-lastpage {
     vertical-align: top;
 }
+.pagination-firstpage {
+    border-top-left-radius: 3px !important;
+    border-bottom-left-radius: 3px !important;
+}
+.pagination-lastpage {
+    border-top-right-radius: 3px !important;
+    border-bottom-right-radius: 3px !important;
+}
 .pagination-reload {
     color: gray;
     font-size: 12px;
+}
+.pagination .input-group input {
+  padding-right: 0.75rem;
+}
+.pagination .input-group input, .pagination .input-group .input-group-addon {
+  width: 50px;
+}
+.page-link {
+  padding: 0.
+}
+@media (max-width: 767px) {
+  .pagination-box {
+    text-align: center;
+  }
+  .pagination-range, .pagination-controllers {
+    float: none;
+    display: block;
+  }
 }
 `;

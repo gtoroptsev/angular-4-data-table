@@ -1,9 +1,8 @@
 export const TABLE_TEMPLATE = `
 <div class="data-table-wrapper">
-    <data-table-header *ngIf="header"></data-table-header>
-
-    <div class="data-table-box">
-        <table class="table table-condensed table-bordered data-table">
+    <!--<data-table-header *ngIf="header"></data-table-header>-->
+    <div class="data-table-box table-responsive">
+        <table class="table table-condensed table-bordered table-sm data-table">
             <thead>
                 <tr>
                     <th [hide]="!expandColumnVisible" class="expand-column-header">
@@ -19,10 +18,10 @@ export const TABLE_TEMPLATE = `
                         <span *ngIf="!column.headerTemplate" [textContent]="column.header"></span>
                         <span *ngIf="column.headerTemplate" [ngTemplateOutlet]="column.headerTemplate" [ngOutletContext]="{column: column}"></span>
                         <span class="column-sort-icon" *ngIf="column.sortable">
-                            <span class="glyphicon glyphicon-sort column-sortable-icon" [hide]="column.property === sortBy"></span>
+                            <span class="fa fa-sort column-sortable-icon" [hide]="column.property === sortBy"></span>
                             <span [hide]="column.property !== sortBy">
-                                <span class="glyphicon glyphicon-triangle-top" [hide]="sortAsc"></span>
-                                <span class="glyphicon glyphicon-triangle-bottom" [hide]="!sortAsc"></span>
+                                <i class="fa fa-sort-asc" [hide]="sortAsc"></i>
+                                <i class="fa fa-sort-desc" [hide]="!sortAsc"></i>
                             </span>
                         </span>
                         <span *ngIf="column.resizable" class="column-resize-handle" (mousedown)="resizeColumnStart($event, column, th)"></span>

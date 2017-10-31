@@ -10,7 +10,26 @@ export const TABLE_STYLE = `
 
 :host /deep/ .data-table > thead > tr > th,
 :host /deep/ .data-table > tbody > tr > td {
-	overflow: hidden;
+	font-size: 13px;
+  padding: 4px 8px;
+  overflow: visible;
+  border: 1px solid #e7ecf1 !important;
+}
+
+:host /deep/ .data-table > thead > tr > th {
+  text-align: center;
+  vertical-align: middle;
+  padding: 8px 20px 8px 8px;
+}
+
+:host /deep/ .data-table > thead > tr > th:first-letter {
+  text-transform: uppercase;
+}
+
+:host /deep/ .data-table > thead > tr > th:nth-child(1),
+:host /deep/ .data-table > thead > tr > th:nth-child(2),
+:host /deep/ .data-table > thead > tr > th:nth-child(3) {
+  padding-right: 8px;
 }
 
 /* I can't use the bootstrap striped table, because of the expandable rows */
@@ -23,12 +42,6 @@ export const TABLE_STYLE = `
 .data-table .substitute-rows > tr:hover,
 :host /deep/ .data-table .data-table-row:hover {
     background-color: #ECECEC;
-}
-/* table itself: */
-
-.data-table {
-    box-shadow: 0 0 15px rgb(236, 236, 236);
-    table-layout: fixed;
 }
 
 /* header cells: */
@@ -50,7 +63,9 @@ export const TABLE_STYLE = `
     cursor: pointer;
 }
 .column-header .column-sort-icon {
-	float: right;
+  position: absolute;
+  top: 25%;
+  right: 5px;
 }
 .column-header.resizable .column-sort-icon {
     margin-right: 8px;
@@ -82,4 +97,26 @@ export const TABLE_STYLE = `
    background-color: rgba(255, 255, 255, 0.3);
    top: 0;
 }
+
+.data-table-wrapper {
+  position: relative;
+}
+
+data-table-header {
+	position: absolute;
+  right: 0;
+  top: -48.5px;
+}
+
+@media (max-width: 767px) {
+  .table-responsive{
+    overflow: auto;
+  }
+}
+@media (min-width: 767px) {
+  .table-responsive{
+    overflow: inherit !important; /* Sometimes needs !important */
+  }
+}
+
 `;

@@ -10,8 +10,8 @@ export const ROW_TEMPLATE = `
     (click)="dataTable.rowClicked(_this, $event)"
     >
     <td [hide]="!dataTable.expandColumnVisible" (click)="expanded = !expanded; $event.stopPropagation()" class="row-expand-button">
-        <span class="glyphicon glyphicon-triangle-right" [hide]="expanded"></span>
-        <span class="glyphicon glyphicon-triangle-bottom" [hide]="!expanded"></span>
+        <span class="fa fa-caret-right" [hide]="expanded"></span>
+        <span class="fa fa-caret-down" [hide]="!expanded"></span>
     </td>
     <td [hide]="!dataTable.indexColumnVisible" class="index-column" [textContent]="displayIndex"></td>
     <td [hide]="!dataTable.selectColumnVisible" class="select-column">

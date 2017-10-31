@@ -52,7 +52,7 @@ export class DataTable implements DataTableParams, OnInit {
     @Input() rowTooltip: RowCallback;
     @Input() selectColumn = false;
     @Input() multiSelect = true;
-    @Input() substituteRows = true;
+    @Input() substituteRows = false;
     @Input() expandableRows = false;
     @Input() translations: DataTableTranslations = defaultTranslations;
     @Input() selectOnRowClick = false;
