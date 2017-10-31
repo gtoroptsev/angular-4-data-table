@@ -27,6 +27,8 @@
   "devDependencies": {},
   "dependencies": {
     "@angular/core": "^4.0.0",
+    "@angular/common": "^4.0.0",
+    "@angular/forms": "^4.0.0",
     "@types/node": "~6.0.60",
     "rxjs": "^5.1.0",
     "ts-node": "~2.0.0",

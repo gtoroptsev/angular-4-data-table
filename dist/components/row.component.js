@@ -19,7 +19,7 @@ var DataTableRow = (function () {
     function DataTableRow(dataTable) {
         this.dataTable = dataTable;
         this.selectedChange = new core_1.EventEmitter();
-        this._this = this; // FIXME is there no template keyword for this in angular 2?
+        this._this = this;
     }
     Object.defineProperty(DataTableRow.prototype, "selected", {
         get: function () {
