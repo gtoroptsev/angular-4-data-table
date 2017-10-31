@@ -1,46 +1,46 @@
 export const TABLE_STYLE = `
 /* bootstrap override: */
 
-:host /deep/ .data-table.table > tbody+tbody {
+.data-table.table > tbody+tbody {
     border-top: none;
 }
-:host /deep/ .data-table.table td {
+.data-table.table td {
     vertical-align: middle;
 }
 
-:host /deep/ .data-table > thead > tr > th,
-:host /deep/ .data-table > tbody > tr > td {
+.data-table > thead > tr > th,
+.data-table > tbody > tr > td {
 	font-size: 13px;
   padding: 4px 8px;
   overflow: visible;
   border: 1px solid #e7ecf1 !important;
 }
 
-:host /deep/ .data-table > thead > tr > th {
+.data-table > thead > tr > th {
   text-align: center;
   vertical-align: middle;
   padding: 8px 20px 8px 8px;
 }
 
-:host /deep/ .data-table > thead > tr > th:first-letter {
+.data-table > thead > tr > th:first-letter {
   text-transform: uppercase;
 }
 
-:host /deep/ .data-table > thead > tr > th:nth-child(1),
-:host /deep/ .data-table > thead > tr > th:nth-child(2),
-:host /deep/ .data-table > thead > tr > th:nth-child(3) {
+.data-table > thead > tr > th:nth-child(1),
+.data-table > thead > tr > th:nth-child(2),
+.data-table > thead > tr > th:nth-child(3) {
   padding-right: 8px;
 }
 
 /* I can't use the bootstrap striped table, because of the expandable rows */
-:host /deep/ .row-odd {
+.row-odd {
     background-color: #F6F6F6;
 }
-:host /deep/ .row-even {
+.row-even {
 }
 
 .data-table .substitute-rows > tr:hover,
-:host /deep/ .data-table .data-table-row:hover {
+.data-table .data-table-row:hover {
     background-color: #ECECEC;
 }
 
